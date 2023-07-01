@@ -1,0 +1,1 @@
+cp \\wsl$\\home\\danbujak\\zmk\\zmk\\app\\build\\left\\zephyr\\zmk.uf2 E:\\
