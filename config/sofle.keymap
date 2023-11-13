@@ -24,7 +24,7 @@
 //                       |-------+-------+-------+-------+-------+-------| | MUTE |               | MUTE | |-------+-------+-------+-------+-------+-------|
 //                       | SHIFT |  Z    |  X    |  C    |  D    |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       |  ALT  |  GUI  |  CTRL | SPACE |  SPACE  /             \  SPACE  | SPACE |  CTRL |  GUI  |  ALT  |
+//                                       |  ALT  |  GUI  |  CTRL | SPACE |   MO1   /             \   MO1   | SPACE |  CTRL |  GUI  |  ALT  |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
@@ -45,11 +45,11 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |       | UNDO  | REDO  |       |       |       |                                 |       |       |  HOME |   ^   |  END  |  F12  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       |       | COPY  | PASTE |       |  DEL  |       | .------.               .------. | PGUP  | BKSPC |  <--  |   v   |  -->  | ENTER |
+//                       |       | COPY  | PASTE | SAVE  |  DEL  |       | .------.               .------. | PGUP  | BKSPC |  <--  |   v   |  -->  | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
 //                       | SHIFT |       |       |       |       |       | '------'               '------' | PGDN  |       |       |       |   \   | TRANS |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       | TRANS | TRANS | TRANS | TRANS |  TRANS  /             \  TRANS  | TRANS | TRANS | TRANS | TRANS |
+//                                       | TRANS | TRANS | TRANS | TRANS |  ENTER  /             \  TRANS  | TRANS | TRANS | TRANS | TRANS |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
@@ -57,7 +57,7 @@
 &none       &kp LC(Z)    &kp LC(Y)    &none          &none        &none                                         &none        &kp EQL     &kp HOME        &kp UP      &kp END     &kp F12
 &trans      &kp LC(C)    &kp LC(V)    &kp LC(S)      &kp DEL      &none                                         &kp PG_UP    &kp BSPC    &kp LEFT        &kp DOWN    &kp RIGHT   &kp ENTER
 &kp LSHFT   &none        &none        &none          &none        &none        &none                  &none     &kp PG_DN    &none       &none           &none       &kp BSLH    &trans
-                         &trans       &trans         &trans       &trans       &trans                 &trans    &trans       &trans      &trans          &trans
+                         &trans       &trans         &trans       &trans       &ENTER                 &trans    &trans       &trans      &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
