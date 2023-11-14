@@ -49,7 +49,7 @@
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
 //                       | SHIFT |       |       |       |       |       | '------'               '------' | PGDN  |       |       |       |   \   | TRANS |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       | TRANS | TRANS | TRANS | TRANS |  ENTER  /             \  TRANS  | TRANS | TRANS | TRANS | TRANS |
+//                                       | TRANS | TRANS | TRANS | ENTER |  TRANS  /             \  TRANS  | TRANS | TRANS | TRANS | TRANS |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
@@ -57,7 +57,7 @@
 &mo 2       &kp LC(Z)    &kp LC(Y)    &none          &none        &none                                         &none        &kp EQL     &kp HOME        &kp UP      &kp END     &kp F12
 &trans      &kp LC(C)    &kp LC(V)    &kp LC(S)      &kp DEL      &none                                         &kp PG_UP    &kp BSPC    &kp LEFT        &kp DOWN    &kp RIGHT   &kp ENTER
 &kp LSHFT   &none        &none        &none          &none        &none        &none                  &none     &kp PG_DN    &none       &none           &none       &kp BSLH    &trans
-                         &trans       &trans         &trans       &trans       &kp ENTER              &trans    &trans       &trans      &trans          &trans
+                         &trans       &trans         &trans       &kp ENTER    &trans                 &trans    &trans       &trans      &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
