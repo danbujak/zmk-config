@@ -24,7 +24,7 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  MO2  |   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |  N    |   E   |   I   |   O   |   '   |
 //                       |-------+-------+-------+-------+-------+-------| | MUTE |               | MUTE | |-------+-------+-------+-------+-------+-------|
-//                       | SHIFT |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
+//                       |       |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  GUI  |  CTRL |  MO1  | SPACE   /             \   MO1   | SPACE |  CTRL |  GUI  |  ALT  |
 //                                       |       |       |       |       | SHIFT  /               \        |       |       |       |       |
@@ -33,8 +33,8 @@
 &kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
 &lt 3 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
 &mo 2       &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
-&kp LSHFT   &kp Z    &kp X        &kp C        &kp D         &kp V      &kp C_MUTE               &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
-                     &kp LALT     &kp LGUI     &kp LCTRL     &mo 1      &mt LSHFT SPACE          &mo 1        &kp SPACE       &kp RCTRL     &kp LGUI     &kp LALT
+&none       &kp Z    &kp X        &kp C        &kp D         &kp V      &kp C_MUTE               &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
+                     &kp LALT     &kp LGUI     &kp LCTRL     &mo 1      &mt LSHFT SPACE          &kp BSPC     &kp ENTER       &kp LALT      &kp RCTRL    &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -53,7 +53,7 @@
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
 //                       | SHIFT |       |       |       | ENTER | PASTE | '------'               '------' |       |       |       |       |       |       |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       |       |       |       |       |         /             \         |       |       |       |       |
+//                                       |       |       |       |       |  SHIFT  /             \         |       |       |       |       |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
@@ -61,7 +61,7 @@
 &kp TAB     &kp LC(Z)    &kp LC(Y)    &kp LC(F)      &kp LC(P)    &kp BSPC                                      &none        &kp HOME    &kp UP          &kp END     &kp LC(Z)   &kp F12
 &kp LC(C)   &kp LC(A)    &kp LC(X)    &kp LC(S)      &kp LC(T)    &kp DEL                                       &kp BSPC     &kp LEFT    &kp DOWN        &kp RIGHT   &none       &kp ENTER
 &kp LSHFT   &none        &none        &none          &kp ENTER    &kp LC(V)    &none                  &none     &none        &none       &none           &none       &none       &trans
-                         &trans       &trans         &trans       &trans       &none                  &none     &trans       &trans      &trans          &trans
+                         &trans       &trans         &trans       &trans       &kp LSHFT              &none     &trans       &trans      &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
