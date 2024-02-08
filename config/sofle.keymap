@@ -33,14 +33,14 @@
 //                       |       |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  GUI  |  CTRL |  MO1  |  SHIFT  /             \  BKSPC  | SPACE | ENTER |  CTR  |  GUI  |
-//                                       |       |       |       |       |        /               \        |       |       |       |       |
+//                                       |       |       |       | SPACE |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
 &kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
 &lt 3 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
 &mo 2       &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
 &none       &kp Z    &kp X        &kp C        &kp D         &kp V        &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
-                     &kp LALT     &kp LGUI     &kp LCTRL     &mo 1        &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
+                     &kp LALT     &kp LGUI     &kp LCTRL     &lt 1 SPACE  &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
