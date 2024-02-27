@@ -16,6 +16,10 @@
 // Mod tap   = &mt LSHFT SPACE  (shift when held, space when tapped)
 // Layer tap = &lt 3 TAB        (layer 3 when held, tab otherwise)
 
+&lt {
+    quick_tap_ms = <100>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -30,7 +34,7 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  MO2  |   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |  N    |   E   |   I   |   O   |   '   |
 //                       |-------+-------+-------+-------+-------+-------| | MUTE |               | MUTE | |-------+-------+-------+-------+-------+-------|
-//                       |       |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
+//                       | SHIFT |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  GUI  |  CTRL |  MO1  |  SHIFT  /             \  BKSPC  | SPACE | ENTER |  CTR  |  GUI  |
 //                                       |       |       |       | SPACE |        /               \        |       |       |       |       |
@@ -39,7 +43,7 @@
 &kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
 &lt 3 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
 &mo 2       &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
-&none       &kp Z    &kp X        &kp C        &kp D         &kp V        &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
+&kp LSHFT   &kp Z    &kp X        &kp C        &kp D         &kp V        &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
                      &kp LALT     &kp LGUI     &kp LCTRL     &lt 1 SPACE  &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
             >;
 
@@ -57,16 +61,16 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  CPY  | CTR-A |  CUT  |  SAVE | N-TAB |  DEL  | .------.               .------. |       |  <-   |   v   |   ->  |       | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
-//                       |       |       | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |       |  [/{  |  ]/}  |  \ |  |       |
+//                       |       | BKSPC | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |       |  [/{  |  ]/}  |  \ |  |       |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       |       |       |       |       |  SHIFT  /             \  BKSPC  |       |       |       |       |
+//                                       |  ALT  |  GUI  |  CTRL |       |  SHIFT  /             \  BKSPC  |       |       |       |       |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
 &kp ESC     &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7      &kp F8          &kp F9      &kp F10     &kp F11
 &kp TAB     &kp LC(Z)    &kp LC(Y)    &kp LC(F)      &kp LC(P)    &kp BSPC                                      &none        &kp HOME    &kp UP          &kp END     &kp LC(Y)   &kp F12
 &kp LC(C)   &kp LC(A)    &kp LC(X)    &kp LC(S)      &kp LC(T)    &kp DEL                                       &none        &kp LEFT    &kp DOWN        &kp RIGHT   &none       &none
-&none       &none        &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LC(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
+&none       &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LC(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
                          &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans      &trans          &trans
             >;
 
