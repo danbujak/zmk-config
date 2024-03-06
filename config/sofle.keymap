@@ -57,20 +57,20 @@
 //                       .-----------------------------------------------.                                 .-----------------------------------------------.
 //                       |  ESC  |  FN1  |  FN2  |  FN3  |  FN4  |  FN5  |                                 |  FN6  |  FN7  |  FN8  |  FN9  |  FN10 | FN11  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       |  TAB  |  UNDO |  REDO |  C-F  |  C-P  | BKSPC |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
+//                       |  TAB  |  UNDO |  REDO |  C-F  |  C-P  |  C-P  |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  CPY  | CTR-A |  CUT  |  SAVE | N-TAB |  DEL  | .------.               .------. |       |  <-   |   v   |   ->  |       | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
-//                       |       | BKSPC | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |       |  [/{  |  ]/}  |  \ |  |       |
+//                       | SHIFT | BKSPC | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |       |  [/{  |  ]/}  |  \ |  |       |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  GUI  |  CTRL |       |  SHIFT  /             \  BKSPC  |       |       |       |       |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
 &kp ESC     &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7      &kp F8          &kp F9      &kp F10     &kp F11
-&kp TAB     &kp LC(Z)    &kp LC(Y)    &kp LC(F)      &kp LC(P)    &kp BSPC                                      &none        &kp HOME    &kp UP          &kp END     &kp LC(Y)   &kp F12
+&kp TAB     &kp LC(Z)    &kp LC(Y)    &kp LC(F)      &kp LC(P)    &kp LC(B)                                     &none        &kp HOME    &kp UP          &kp END     &kp LC(Y)   &kp F12
 &kp LC(C)   &kp LC(A)    &kp LC(X)    &kp LC(S)      &kp LC(T)    &kp DEL                                       &none        &kp LEFT    &kp DOWN        &kp RIGHT   &none       &none
-&none       &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LC(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
+&trans      &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LC(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
                          &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans      &trans          &trans
             >;
 
