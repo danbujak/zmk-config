@@ -16,11 +16,22 @@
 // Mod tap   = &mt LSHFT SPACE  (shift when held, space when tapped)
 // Layer tap = &lt 3 TAB        (layer 3 when held, tab otherwise)
 
-&lt {
-    quick_tap_ms = <100>;
-};
+//&lt {
+//    quick_tap_ms = <100>;
+//};
 
 / {
+    behaviors {
+        pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -57,7 +68,7 @@
 //                       .-----------------------------------------------.                                 .-----------------------------------------------.
 //                       |  ESC  |  FN1  |  FN2  |  FN3  |  FN4  |  FN5  |                                 |  FN6  |  FN7  |  FN8  |  FN9  |  FN10 | FN11  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       |  TAB  |  UNDO |  REDO |  C-F  |  C-P  |  C-P  |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
+//                       |  TAB  |  UNDO |  REDO |  C-F  |  C-P  |  C-B  |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  CPY  | CTR-A |  CUT  |  SAVE | N-TAB |  DEL  | .------.               .------. |       |  <-   |   v   |   ->  |       | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
