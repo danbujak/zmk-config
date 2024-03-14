@@ -16,18 +16,14 @@
 // Mod tap   = &mt LSHFT SPACE  (shift when held, space when tapped)
 // Layer tap = &lt 3 TAB        (layer 3 when held, tab otherwise)
 
-//&lt {
-//    quick_tap_ms = <100>;
-//};
-
 / {
     behaviors {
         pht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1>;    // <---[[the W key]]
         };
