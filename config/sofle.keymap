@@ -126,9 +126,9 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       | L6/TB |   Q   |   W   |   F   |   P   |  B    |                                 |  J    |   L   |   U   |   Y   |   ;   |  +/=  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       | L5/ESC|   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |  N    |   E   |   I   |   O   |   '   |
+//                       | L5/ESC|   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |   N   |   E   |   I   |   O   |   '   |
 //                       |-------+-------+-------+-------+-------+-------| | MUTE |               | MUTE | |-------+-------+-------+-------+-------+-------|
-//                       | SHIFT |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |  H    |   ,   |   .   |   /   | SHIFT |
+//                       | SHIFT |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |   H   |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  CTRL |  GUI  |  MO4  |  SHIFT  /             \  BKSPC  | SPACE | ENTER |  CTR  |  GUI  |
 //                                       |       |       |       | SPACE |        /               \        |       |       |       |       |
@@ -154,17 +154,17 @@
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  CPY  | CTR-A |  CUT  |  SAVE | N-TAB |  DEL  | .------.               .------. |       |  <-   |   v   |   ->  |       | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
-//                       | SHIFT | BKSPC | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |       |  [/{  |  ]/}  |  \ |  |       |
+//                       | SHIFT | BKSPC | CTR-X | CTR-C | ENTER | PASTE | '------'               '------' |       |  C-H  |  [/{  |  ]/}  |  \ |  |       |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
 //                                       |  ALT  |  GUI  |  CTRL |       |  SHIFT  /             \  BKSPC  |       |       |       |       |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
-&none       &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7      &kp F8          &kp F9      &kp F10     &kp F11
-&kp TAB     &kp LG(Z)    &kp LG(Y)    &kp LG(F)      &kp LG(P)    &kp LG(B)                                     &none        &kp HOME    &kp UP          &kp END     &kp LG(Y)   &kp F12
-&kp LG(C)   &kp LG(A)    &kp LG(X)    &kp LG(S)      &kp LG(T)    &kp DEL                                       &none        &kp LEFT    &kp DOWN        &kp RIGHT   &none       &none
-&trans      &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LG(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
-                         &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans      &trans          &trans
+&none       &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7       &kp F8          &kp F9        &kp F10     &kp F11
+&kp TAB     &kp LG(Z)    &kp LG(Y)    &kp LG(F)      &kp LG(P)    &kp LG(B)                                     &none        &kp LG(LEFT) &kp UP          &kp LG(RIGHT) &kp LG(Y)   &kp F12
+&kp LG(C)   &kp LG(A)    &kp LG(X)    &kp LG(S)      &kp LG(T)    &kp DEL                                       &none        &kp LEFT     &kp DOWN        &kp RIGHT     &none       &none
+&trans      &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LG(V)    &none                  &none     &none        &kp LG(H)    &kp LBKT        &kp RBKT      &kp BSLH    &trans
+                         &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans       &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
