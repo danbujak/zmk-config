@@ -163,7 +163,7 @@
 &none       &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7      &kp F8          &kp F9      &kp F10     &kp F11
 &kp TAB     &kp LG(Z)    &kp LG(Y)    &kp LG(F)      &kp LG(P)    &kp LG(B)                                     &none        &kp HOME    &kp UP          &kp END     &kp LG(Y)   &kp F12
 &kp LG(C)   &kp LG(A)    &kp LG(X)    &kp LG(S)      &kp LG(T)    &kp DEL                                       &none        &kp LEFT    &kp DOWN        &kp RIGHT   &none       &none
-&trans      &kp BSPC     &kp LG(X)    &kp LG(C)      &kp ENTER    &kp LG(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
+&trans      &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LG(V)    &none                  &none     &none        &none       &kp LBKT        &kp RBKT    &kp BSLH    &trans
                          &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans      &trans          &trans
             >;
 
