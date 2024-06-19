@@ -27,6 +27,12 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1>;    // <---[[the W key]]
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ESC>, <&kp LG(LS(UP))>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -124,9 +130,9 @@
 //                       .-----------------------------------------------.                                 .-----------------------------------------------.
 //                       |  `    |   1   |   2   |   3   |   4   |   5   |                                 |  6    |  7    |  8    |   9   |   0   |  -/_  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       | L6/TB |   Q   |   W   |   F   |   P   |  B    |                                 |  J    |   L   |   U   |   Y   |   ;   |  +/=  |
+//                       | L5/TB |   Q   |   W   |   F   |   P   |  B    |                                 |  J    |   L   |   U   |   Y   |   ;   |  +/=  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       | L5/ESC|   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |   N   |   E   |   I   |   O   |   '   |
+//                       | ESC/MC|   A   |   R   |   S   |   T   |  G    | .------.               .------. |  M    |   N   |   E   |   I   |   O   |   '   |
 //                       |-------+-------+-------+-------+-------+-------| | MUTE |               | MUTE | |-------+-------+-------+-------+-------+-------|
 //                       | SHIFT |   Z   |   X   |   C   |   D   |  V    | '------'               '------' |  K    |   H   |   ,   |   .   |   /   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
@@ -135,8 +141,8 @@
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
 &kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
-&lt 6 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
-&lt 5 ESC   &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
+&lt 5 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
+&td0        &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
 &kp LSHFT   &kp Z    &kp X        &kp C        &kp D         &kp V        &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
                      &kp LALT     &kp LCTRL    &kp LGUI      &lt 4 SPACE  &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
             >;
