@@ -156,7 +156,7 @@
 //                       .-----------------------------------------------.                                 .-----------------------------------------------.
 //                       | MCTRL |  FN1  |  FN2  |  FN3  |  FN4  |  FN5  |                                 |  FN6  |  FN7  |  FN8  |  FN9  |  FN10 | FN11  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       |  TAB  |  UNDO |  REDO |  C-F  |  C-P  |  C-B  |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
+//                       | G-TAB |  UNDO |  REDO |  C-F  |  C-P  |  C-B  |                                 |       |  HOME |   ^   |  END  |  REDO | FN12  |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |  CPY  | CTR-A |  CUT  |  SAVE | N-TAB |  DEL  | .------.               .------. |       |  <-   |   v   |   ->  |       | ENTER |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
@@ -167,7 +167,7 @@
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
 &kp LG(UP)  &kp F1       &kp F2       &kp F3         &kp F4       &kp F5                                        &kp F6       &kp F7       &kp F8          &kp F9        &kp F10     &kp F11
-&kp TAB     &kp LG(Z)    &kp LG(Y)    &kp LG(F)      &kp LG(P)    &kp LG(B)                                     &none        &kp LG(LEFT) &kp UP          &kp LG(RIGHT) &kp LG(Y)   &kp F12
+&kp LG(TAB) &kp LG(Z)    &kp LG(Y)    &kp LG(F)      &kp LG(P)    &kp LG(B)                                     &none        &kp LG(LEFT) &kp UP          &kp LG(RIGHT) &kp LG(Y)   &kp F12
 &kp LG(C)   &kp LG(A)    &kp LG(X)    &kp LG(S)      &kp LG(T)    &kp DEL                                       &none        &kp LEFT     &kp DOWN        &kp RIGHT     &none       &none
 &trans      &kp BSPC     &kp LC(X)    &kp LC(C)      &kp ENTER    &kp LG(V)    &none                  &none     &none        &kp LG(H)    &kp LBKT        &kp RBKT      &kp BSLH    &trans
                          &trans       &trans         &trans       &trans       &kp LSHFT              &kp BSPC  &kp SPACE    &trans       &trans          &trans
