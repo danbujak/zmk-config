@@ -184,22 +184,22 @@
 //                       .-----------------------------------------------.                                 .-----------------------------------------------.
 //                       |  WIN  |       |       |       |       |       |                                 |       |       |       |  [/{  |  ]/}  |       |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
-//                       |       |       |       |       |       |  DEL  |                                 |       |       |  PGu  |       |       |       |
+//                       |       |       |       |       |       |  DEL  |                                 |       | WSP-L |  PGu  | WSP-R |       |       |
 //                       |-------+-------+-------+-------+-------+-------|                                 |-------+-------+-------+-------+-------+-------|
 //                       |       |       |       |       |       |       | .------.               .------. | BKSPC |  BACK |  PGd  |  FWD  |       |       |
 //                       |-------+-------+-------+-------+-------+-------| |      |               |      | |-------+-------+-------+-------+-------+-------|
 //                       |       |       |       |       |       |       | '------'               '------' |       |       |       |       |   \   | SHIFT |
 //                       '-------+-------+-------+-------+-------+-------+---------.            .----------+-------+-------+-------+-------+-------+-------'
-//                                       |       |       |       | SPACE |  SHIFT  /             \         |       |       |       |       |
+//                                       |       |       |       | SPACE |  SHIFT  /             \         | MCTR  |       |       |       |
 //                                       |       |       |       |       |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
 
             bindings = <
-&to 0       &none        &none        &none          &none        &none                                         &none        &none        &none           &kp LBKT      &kp RBKT    &none
-&none       &none        &none        &none          &none        &kp DEL                                       &none        &none        &kp PG_UP       &none         &none       &none
-&none       &none        &none        &none          &none        &none                                         &kp BSPC     &kp LG(LEFT) &kp PG_DN       &kp LG(RIGHT) &none       &none
-&none       &none        &none        &none          &none        &none        &none                  &none     &none        &none        &none           &none         &kp BSLH    &kp RSHFT
-                         &none        &none          &none        &kp SPACE    &kp LSHFT              &none     &none        &none        &none           &none
+&to 0       &none        &none        &none          &none        &none                                         &none          &none        &none           &kp LBKT      &kp RBKT    &none
+&none       &none        &none        &none          &none        &kp DEL                                       &none          &kp LC(LEFT) &kp PG_UP       &kp LC(RIGHT) &none       &none
+&none       &none        &none        &none          &none        &none                                         &kp BSPC       &kp LG(LEFT) &kp PG_DN       &kp LG(RIGHT) &none       &none
+&none       &none        &none        &none          &none        &none        &none                  &none     &none          &none        &none           &none         &kp BSLH    &kp RSHFT
+                         &none        &none          &none        &kp SPACE    &kp LSHFT              &none     &kp LG(LS(UP)) &none        &none           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
