@@ -20,6 +20,16 @@
 
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
+#define WMN 0  // Windows main
+#define WFN 1  // Windows functions
+#define WNV 2  // Windows navigation
+
+#define MMN 3  // Mac main
+#define MFN 4  // Mac functions
+#define MNV 5  // Mac navigation
+
+#define OTH 6  // Others functions
+
 / {
     behaviors {
         mo_tog: behavior_mo_tog {
@@ -58,11 +68,11 @@
 //                                       |       |       |       | SPACE |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
-&kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
-&lt 6 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
-&lt 2 ESC   &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
-&kp LSHFT   &kp Z    &kp X        &kp C        &kp D         &kp V        &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
-                     &kp LALT     &kp LCTRL    &kp LGUI      &lt 1 SPACE  &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
+&kp GRAVE     &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
+&lt OTH TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
+&lt WNV ESC   &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
+&kp LSHFT     &kp Z    &kp X        &kp C        &kp D         &kp V          &kp C_MUTE           &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
+                       &kp LALT     &kp LCTRL    &kp LGUI      &lt WFN SPACE  &kp LSHFT            &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -113,7 +123,7 @@
 //                                       '---------------------------------------'                 '---------------------------------------'
 
             bindings = <
-&to 3       &none        &none        &none          &none        &none                                         &none        &none        &none           &kp LBKT      &kp RBKT    &none
+&to MMN     &none        &none        &none          &none        &none                                         &none        &none        &none           &kp LBKT      &kp RBKT    &none
 &none       &none        &none        &none          &none        &kp DEL                                       &none        &none        &kp PG_UP       &none         &none       &none
 &none       &none        &none        &none          &none        &none                                         &kp BSPC     &kp LA(LEFT) &kp PG_DN       &kp LA(RIGHT) &none       &none
 &none       &none        &none        &none          &none        &none        &none                  &none     &none        &none        &none           &none         &kp BSLH    &kp RSHFT
@@ -145,11 +155,11 @@
 //                                       |       |       |  MCTR | SPACE |        /               \        |       |       |       |       |
 //                                       '---------------------------------------'                 '---------------------------------------'
             bindings = <
-&kp GRAVE   &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
-&lt 6 TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
-&lt 5 ESC   &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
-&kp LSHFT   &kp Z    &kp X        &kp C        &kp D         &kp V             &kp C_MUTE             &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
-                     &kp LALT     &kp LCTRL    &td0          &mo_tog 4 SPACE  &kp LSHFT              &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
+&kp GRAVE     &kp N1   &kp N2       &kp N3       &kp N4        &kp N5                                           &kp N6          &kp N7        &kp N8       &kp N9       &kp N0       &kp MINUS
+&lt OTH TAB   &kp Q    &kp W        &kp F        &kp P         &kp B                                            &kp J           &kp L         &kp U        &kp Y        &kp SEMI     &kp EQL
+&lt MNV ESC   &kp A    &kp R        &kp S        &kp T         &kp G                                            &kp M           &kp N         &kp E        &kp I        &kp O        &kp SQT
+&kp LSHFT     &kp Z    &kp X        &kp C        &kp D         &kp V              &kp C_MUTE       &kp C_MUTE   &kp K           &kp H         &kp COMMA    &kp DOT      &kp FSLH     &kp RSHFT
+                       &kp LALT     &kp LCTRL    &td0          &mo_tog MFN SPACE  &kp LSHFT        &kp BSPC     &kp SPACE       &kp ENTER     &kp RCTRL    &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -198,7 +208,7 @@
 //                                       '---------------------------------------'                 '---------------------------------------'
 
             bindings = <
-&to 0       &none        &none        &none          &none        &none                                         &none          &none        &none           &kp LBKT      &kp RBKT    &none
+&to WMN     &none        &none        &none          &none        &none                                         &none          &none        &none           &kp LBKT      &kp RBKT    &none
 &none       &none        &none        &none          &none        &kp DEL                                       &none          &kp LC(LEFT) &kp PG_UP       &kp LC(RIGHT) &none       &none
 &none       &none        &none        &none          &none        &none                                         &kp BSPC       &kp LG(LEFT) &kp PG_DN       &kp LG(RIGHT) &none       &none
 &none       &none        &none        &none          &none        &none        &none                  &none     &none          &none        &none           &none         &kp BSLH    &kp RSHFT
