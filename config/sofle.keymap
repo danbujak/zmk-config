@@ -46,7 +46,7 @@
             tapping-term-ms = <250>;
             bindings =
               <&kp LGUI>,
-              <&kp LG(LS(UP))>;
+              <&kp LC(UP)>;
         };
     };
     keymap {
